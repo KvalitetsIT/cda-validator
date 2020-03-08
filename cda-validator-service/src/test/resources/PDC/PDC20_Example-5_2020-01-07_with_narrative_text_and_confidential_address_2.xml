@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../Stylesheet/Lantana Group/stylesheets-master/Stylesheets/CDA/cda.xsl" ?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:hl7-org:v3 ../Schema/infrastructure/cda/CDA_SDTC.xsd"
+    xmlns="urn:hl7-org:v3" moodCode="EVN">
+    <realmCode code="DK"/>
+    <typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+    <!-- MedCom templateId for Personal Data Card -->
+    <templateId root="1.2.208.184.16.1"/>
+    <!-- Unik ID for this PDC instance -->
+    <id assigningAuthorityName="MedCom" extension="9b224744-cad2-4093-94d9-0728f3c668d4"
+        root="1.2.208.184"/>
+    <code displayName="Stamkort" codeSystem="1.2.208.184.100.1" code="PDC"
+        codeSystemName="MedCom Message Codes"/>
+    <title>Personal Data Card for 2512489996</title>
+    <!-- Personal Data Card generated at:  -->
+    <effectiveTime value="20190808160510+0200"/>
+    <confidentialityCode codeSystem="2.16.840.1.113883.5.25" code="N"/>
+    <languageCode code="da-DK"/>
+
+    <!-- This recordTarget indentifies the patient and related information from CPR -->
+    <!-- GP information is placed in the providerOrganizationt element -->
+    <recordTarget contextControlCode="OP" typeCode="RCT">
+        <patientRole classCode="PAT">
+            <id assigningAuthorityName="CPR" extension="2512489996" root="1.2.208.176.1.2"/>
+            <!-- This id is present if the address from CPR is marked as confidential (Danish: Adressebeskyttelse)-->
+            <id assigningAuthorityName="MedCom" extension="ConfAddr" root="1.2.208.184.100.1"/>
+            <!-- This is the address from CPR when it is marked as confidential (Danish: Adressebeskyttelse)-->
+            <addr use="H">
+                <streetAddressLine>Adressebeskyttelse</streetAddressLine>
+                <postalCode nullFlavor="NI"/>
+                <city nullFlavor="NI"/>
+                <country nullFlavor="NI"/>
+            </addr>
+            <patient classCode="PSN">
+                <name>
+                    <given>Bente</given>
+                    <given>Kirkegård</given>
+                    <family>Knudsen</family>
+                </name>
+                <administrativeGenderCode codeSystem="2.16.840.1.113883.5.1" code="F"/>
+                <birthTime value="19481225000000+0000"/>
+            </patient>
+            <!-- GP from CPR: Identified by ydernummer, could also be identified by SOR-id -->
+            <providerOrganization>
+                <id extension="123456" root="1.2.208.176.1.4"
+                    assigningAuthorityName="Yderregisteret"/>
+                <name>Testyder</name>
+                <telecom use="WP" value="tel:+4512345678"/>
+                <telecom value="mailto:test@testyder.dk"/>
+                <addr use="H">
+                    <streetAddressLine>Ydervej 42</streetAddressLine>
+                    <postalCode>1234</postalCode>
+                    <city>Yderby</city>
+                </addr>
+            </providerOrganization>
+        </patientRole>
+    </recordTarget>
+
+    <!-- The author of this document is the FSK on-demand-service, identified by SDS -->
+    <author>
+        <!-- time is set to document creating time=effectiveTime above-->
+        <time value="20190808160510+0200"/>
+        <assignedAuthor>
+            <!-- id @root is set to SDS-root-->
+            <id root="1.2.208.176" extension="NI"/>
+            <representedOrganization>
+                <name>Sundhedsdatastyrelsen</name>
+            </representedOrganization>
+        </assignedAuthor>
+    </author>
+
+    <!-- The custodian of this document is the FSK on-demand-service, identified by SDS -->
+    <custodian>
+        <assignedCustodian>
+            <representedCustodianOrganization>
+                <!-- id @root is set to SDS-root-->
+                <id root="1.2.208.176" extension="NI"/>
+                <name>Sundhedsdatastyrelsen</name>
+            </representedCustodianOrganization>
+        </assignedCustodian>
+    </custodian>
+
+    <!--This documentationOf holds the creation time of this CDA instance -->
+    <documentationOf typeCode="DOC">
+        <serviceEvent classCode="ACT" moodCode="EVN">
+            <effectiveTime>
+                <low value="20190808160510+0200"/>
+                <high nullFlavor="NA"/>
+            </effectiveTime>
+        </serviceEvent>
+    </documentationOf>
+
+    <!--This documentationOf holds the version of the CDA-profile -->
+    <documentationOf typeCode="DOC">
+        <serviceEvent classCode="ACT" moodCode="EVN">
+            <!--This templateId tells that this serviceEvent holds the identification (pdc) and version (v2.0) of the CDA profile -->
+            <templateId root="1.2.208.184.200.1.10" extension="2019-09-10"/>
+            <!--This id @extension equals the identification and version of the CDA profile-->
+            <id root="1.2.208.184.100.3" extension="pdc-v2.0" assigningAuthorityName="MedCom"/>
+        </serviceEvent>
+    </documentationOf>
+
+    <component typeCode="COMP" contextConductionInd="true">
+        <structuredBody classCode="DOCBODY" moodCode="EVN">
+            <component typeCode="COMP" contextConductionInd="true">
+                <section classCode="DOCSECT" moodCode="EVN">
+                    <!-- Section templateId for additional information from registers and manually entered information-->
+                    <templateId root="1.2.208.184.16.1.10.20.1" extension="2019-08-14"/>
+                    <text>
+                        <paragraph>Øvrige oplysninger</paragraph>
+                        <!--           <table border="1" width="100%"> -->
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <th>Oplysning</th>
+                                    <th>Værdi</th>
+                                    <th>Kilde/Indtastet af</th>
+                                    <th>Sidst ændret/Indtastet den</th>
+                                </tr>
+                                <tr>
+                                    <td>Forældremyndighed over</td>
+                                    <td>
+                                        <list>
+                                            <item>Mor til 9999999999: Peter Severin Knudsen</item>
+                                            <item>Mor til 9999999998: Elsebeth Larsen</item>
+                                        </list>
+                                    </td>
+                                    <td>CPR</td>
+                                    <td>Ikke oplyst</td>
+                                </tr>
+                                <tr>
+                                    <td>Borgerens navn og adresse</td>
+                                    <td>
+                                        <list>
+                                            <item>Bente Kirkegård Knudsen</item>
+                                            <item>Adressebeskyttelse</item>
+                                        </list>
+                                    </td>
+                                    <td>CPR</td>
+                                    <td>Ikke oplyst</td>
+                                </tr>
+                                <tr>
+                                    <td>Sygesikringsgruppe</td>
+                                    <td>
+                                        <list>
+                                            <item>1</item>
+                                        </list>
+                                    </td>
+                                    <td>Sygesikringen</td>
+                                    <td>Ikke oplyst</td>
+                                </tr>
+                                <tr>
+                                    <td>Registreret organdonor</td>
+                                    <td>
+                                        <list>
+                                            <item>Nej</item>
+                                        </list>
+                                    </td>
+                                    <td>Dansk Center For Organdonation</td>
+                                    <td>Ikke oplyst</td>
+                                </tr>
+                                <tr>
+                                    <td>Registreret behandlingstestamente</td>
+                                    <td>
+                                        <list>
+                                            <item>Nej</item>
+                                        </list>
+                                    </td>
+                                    <td>Sundhedsdatastyrelsen</td>
+                                    <td>Ikke oplyst</td>
+                                </tr>
+                                <tr>
+                                    <td>Registreret livstestamente</td>
+                                    <td>
+                                        <list>
+                                            <item>Ja</item>
+                                        </list>
+                                    </td>
+                                    <td>Sundhedsdatastyrelsen</td>
+                                    <td>Ikke oplyst</td>
+                                </tr>
+                                <tr>
+                                    <td>Talt sprog, indtastet</td>
+                                    <td>
+                                        <list>
+                                            <item>Tysk</item>
+                                        </list>
+                                    </td>
+                                    <td>Bente Kirkegård Knudsen</td>
+                                    <td>2019-08-08 16:03:10</td>
+                                </tr>
+                                <tr>
+                                    <td>Midlertidig adresse, indtastet</td>
+                                    <td>
+                                        <list>
+                                            <item>Periode: 2019-01-01 - 2020-01-01</item>
+                                            <item>TemporarystreetAddressLineTypedIn</item>
+                                            <item>TemporarystreetAddressLineTypedIn</item>
+                                            <item>TemporarystreetAddressLineTypedIn</item>
+                                            <item>TemporarystreetAddressLineTypedIn</item>
+                                            <item>TemporarypostalCodeTypedIn</item>
+                                            <item>TemporarycityTypedIn</item>
+                                            <item>TemporarycountryTypedIn</item>
+                                        </list>
+                                    </td>
+                                    <td>Bente Kirkegård Knudsen</td>
+                                    <td>2019-08-08 16:02:10</td>
+                                </tr>
+                                <tr>
+                                    <td>Tandlæge indtastet</td>
+                                    <td>
+                                        <list>
+                                            <item>Tandlæge</item>
+                                            <item>Jette Testesen</item>
+                                            <item>DentiststreetAddressLineTypedIn</item>
+                                            <item>DentiststreetAddressLineTypedIn</item>
+                                            <item>DentiststreetAddressLineTypedIn</item>
+                                            <item>DentiststreetAddressLineTypedIn</item>
+                                            <item>DentistpostalCodeTypedIn</item>
+                                            <item>DentistcityTypedIn</item>
+                                            <item>DentistcountryTypedIn</item>
+                                        </list>
+                                    </td>
+                                    <td>Bente Kirkegård Knudsen</td>
+                                    <td>2019-08-08 16:01:10</td>
+                                </tr>
+                                <tr>
+                                    <td>Kontaktoplysninger, indtastet</td>
+                                    <td>
+                                        <list>
+                                            <item>tel:+4511223344</item>
+                                            <item>tel:(0045)33112244-33112255-3010</item>
+                                            <item>tel:+4566774433</item>
+                                            <item>mailto:bkh@unknownmail.dk</item>
+                                        </list>
+                                    </td>
+                                    <td>Nancy Berggren</td>
+                                    <td>2019-08-08 15:59:10</td>
+                                </tr>
+                                <tr>
+                                    <td>Pårørende, indtastet</td>
+                                    <td>
+                                        <list>
+                                            <item>RelativeGivenNameTypedIn
+                                                RelativeFammilyNameTypedIn</item>
+                                            <item>tel:11223344</item>
+                                            <item>tel:(0046)-55667788-1234</item>
+                                            <item>tel:99001122</item>
+                                            <item>Nabo</item>
+                                            <item>Naboen arbejder hos TDC i Sverige og kan træffes
+                                                på arbejdstelefon i dagtimerne ml. 8 og 16.</item>
+                                        </list>
+                                    </td>
+                                    <td>Bente Kirkegård Knudsen</td>
+                                    <td>2019-08-08 15:58:10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <!-- Custody information -->
+                    <!-- This example shows how to specify a child whom the patient has Custody over -->
+                    <entry typeCode="COMP">
+                        <!-- observation of the patient's custody -->
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- observation templateId for custody -->
+                            <templateId root="1.2.208.184.16.1.10.20.1.23" extension="2019-08-14"/>
+                            <id extension="2267197b-cd9a-4c04-a4b0-cfd91e639f98" root="1.2.208.184"/>
+                            <code code="ChildCustody" codeSystem="1.2.208.184.100.1"
+                                codeSystemName="MedCom Message Codes"
+                                displayName="Forældremyndighed over"/>
+                            <!-- Value representing the CPR of the child of whom the patient has custody -->
+                            <value xsi:type="II" root="1.2.208.176.1.2" extension="9999999999"
+                                assigningAuthorityName="CPR"/>
+                            <!-- Value representing the name of the child of whom the patient has custody -->
+                            <value xsi:type="PN">
+                                <given>Peter</given>
+                                <given>Severin</given>
+                                <family>Knudsen</family>
+                            </value>
+                            <!-- Value representing the relationship the patient has to the child of whom the patient have custody -->
+                            <value xsi:type="CD" code="mor" codeSystem="1.2.208.184.100.2"
+                                codeSystemName="MedCom Relation Codes" displayName="Mor"/>
+                            <!-- Author of this information is CPR -->
+                            <author>
+                                <!-- This templateId is the used when the author of information is a register -->
+                                <templateId root="1.2.208.184.16.1.10.20.31" extension="2019-08-14"/>
+                                <!-- time is unknown -->
+                                <time nullFlavor="NI"/>
+                                <assignedAuthor>
+                                    <!-- id @root is set to CPR-root-->
+                                    <id root="1.2.208.176.1.2" extension="NI"
+                                        assigningAuthorityName="CPR"/>
+                                    <!-- representedOrganization is mandatory when we don't have an authorPerson -->
+                                    <representedOrganization>
+                                        <name>CPR</name>
+                                    </representedOrganization>
+                                </assignedAuthor>
+                            </author>
+                        </observation>
+                    </entry>
+                    <!-- This example shows how to specify a child whom the patient has Custody over -->
+                    <entry typeCode="COMP">
+                        <!-- observation of the patient's custody -->
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- observation templateId for custody -->
+                            <templateId root="1.2.208.184.16.1.10.20.1.23" extension="2019-08-14"/>
+                            <id extension="a5b5a9e5-6cf5-415d-a8c4-3c9e88dde53e" root="1.2.208.184"/>
+                            <code code="ChildCustody" codeSystem="1.2.208.184.100.1"
+                                codeSystemName="MedCom Message Codes"
+                                displayName="Forældremyndighed over"/>
+                            <!-- Value representing the CPR of the child of whom the patient has custody -->
+                            <value xsi:type="II" root="1.2.208.176.1.2" extension="9999999998"
+                                assigningAuthorityName="CPR"/>
+                            <!-- Value representing the name of the child of whom the patient has custody -->
+                            <value xsi:type="PN">
+                                <given>Elsebeth</given>
+                                <family>Larsen</family>
+                            </value>
+                            <!-- Value representing the relationship the patient has to the child of whom the patient have custody -->
+                            <value xsi:type="CD" code="mor" codeSystem="1.2.208.184.100.2"
+                                codeSystemName="MedCom Relation Codes" displayName="Mor"/>
+                            <!-- Author of this information is CPR -->
+                            <author>
+                                <!-- This templateId is the used when the author of information is a register -->
+                                <templateId root="1.2.208.184.16.1.10.20.31" extension="2019-08-14"/>
+                                <!-- time is unknown -->
+                                <time nullFlavor="NI"/>
+                                <assignedAuthor>
+                                    <!-- id @root is set to CPR-root-->
+                                    <id root="1.2.208.176.1.2" extension="NI"
+                                        assigningAuthorityName="CPR"/>
+                                    <!-- representedOrganization is mandatory when we don't have an authorPerson -->
+                                    <representedOrganization>
+                                        <name>CPR</name>
+                                    </representedOrganization>
+                                </assignedAuthor>
+                            </author>
+                        </observation>
+                    </entry>
+                    <!-- The citizen's name and address from CPR -->
+                    <entry typeCode="COMP">
+                        <!-- observation of citizen's name and address, from CPR -->
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- Observation templateId for citizen's name and address, from CPR -->
+                            <templateId root="1.2.208.184.16.1.10.20.1.26" extension="2019-08-14"/>
+                            <id extension="2d537144-57f9-46a2-b323-c4bd6f6c1a60" root="1.2.208.184"/>
+                            <code code="CitizenNameAddr" codeSystem="1.2.208.184.100.1"
+                                codeSystemName="MedCom Message Codes"
+                                displayName="Borgerens navn og adresse"/>
+                            <value xsi:type="PN">
+                                <given>Bente</given>
+                                <given>Kirkegård</given>
+                                <family>Knudsen</family>
+                            </value>
+                            <!-- This id is present if the address from CPR is marked as confidential (Danish: Adressebeskyttelse)-->
+                            <value xsi:type="II" assigningAuthorityName="MedCom" extension="ConfAddr" root="1.2.208.184.100.1"/>
+                            <value xsi:type="AD" use="H">
+                                <streetAddressLine>Adressebeskyttelse</streetAddressLine>
+                                <postalCode nullFlavor="NI"/>
+                                <city nullFlavor="NI"/>
+                                <country nullFlavor="NI"/>
+                            </value>
+                            <!-- Author of this register information is CPR -->
+                            <author>
+                                <!-- This templateId is the used when the author of information is a register -->
+                                <templateId root="1.2.208.184.16.1.10.20.31" extension="2019-08-14"/>
+                                <!-- time is unknown -->
+                                <time nullFlavor="NI"/>
+                                <assignedAuthor>
+                                    <!-- id @root is set to CPR-root-->
+                                    <id root="1.2.208.176.1.2" extension="NI"
+                                        assigningAuthorityName="CPR"/>
+                                    <!-- representedOrganization is mandatory when we don't have an authorPerson -->
+                                    <representedOrganization>
+                                        <name>CPR</name>
+                                    </representedOrganization>
+                                </assignedAuthor>
+                            </author>
+                        </observation>
+                    </entry>
+                    <!-- The citizen's coverage group (Sygesikringsgruppe) from CPR -->
+                    <entry typeCode="COMP">
+                        <!-- observation of citizen's coverage group (Sygesikringsgruppe), from CPR -->
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- Observation templateId for citizen's coverage group, from CPR -->
+                            <templateId root="1.2.208.184.16.1.10.20.1.27" extension="2019-08-14"/>
+                            <id extension="f7272633-2c06-4fee-9d81-1199f03ba569" root="1.2.208.184"/>
+                            <code code="CoverageGroup" codeSystem="1.2.208.184.100.1"
+                                codeSystemName="MedCom Message Codes"
+                                displayName="Sygesikringsgruppe"/>
+                            <value xsi:type="II" root="1.2.208.176.2.7" extension="1"
+                                assigningAuthorityName="Sygesikringen"/>
+                            <!-- Author of this information is sygesikringen -->
+                            <author>
+                                <!-- This templateId is the used when the author of information is a register -->
+                                <templateId root="1.2.208.184.16.1.10.20.31" extension="2019-08-14"/>
+                                <!-- time is unknown -->
+                                <time nullFlavor="NI"/>
+                                <assignedAuthor>
+                                    <!-- id @root is set to Sygesikringen -->
+                                    <id root="1.2.208.176.2.7" extension="NI"
+                                        assigningAuthorityName="Sygesikringen"/>
+                                    <!-- representedOrganization is mandatory when we don't have an authorPerson -->
+                                    <representedOrganization>
+                                        <name>Sygesikringen</name>
+                                    </representedOrganization>
+                                </assignedAuthor>
+                            </author>
+                        </observation>
+                    </entry>
+                    <!-- The citizen's Organ Donor Registration -->
+                    <entry typeCode="COMP">
+                        <!-- observation of citizen's Organ Donor Registration -->
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- Observation templateId for citizen's Organ Donor Registration -->
+                            <templateId root="1.2.208.184.16.1.10.20.1.28" extension="2019-08-14"/>
+                            <id extension="bf5b7087-b8dd-41f3-91c8-d2e0a8955c3a" root="1.2.208.184"/>
+                            <code code="OrganDonorRegistration" codeSystem="1.2.208.184.100.1"
+                                codeSystemName="MedCom Message Codes"
+                                displayName="Registreret organdonor"/>
+                            <value xsi:type="II" root="1.2.208.176.1.10" extension="false"
+                                assigningAuthorityName="Dansk Center For Organdonation"/>
+                            <!-- Author of this information is Danish Organ Donor Register -->
+                            <author>
+                                <!-- This templateId is the used when the author of information is a register -->
+                                <templateId root="1.2.208.184.16.1.10.20.31" extension="2019-08-14"/>
+                                <!-- time is unknown -->
+                                <time nullFlavor="NI"/>
+                                <assignedAuthor>
+                                    <!-- id @root is set to Danish Organ Donor Register -->
+                                    <id root="1.2.208.176.1.10" extension="NI"
+                                        assigningAuthorityName="Dansk Center For Organdonation"/>
+                                    <!-- representedOrganization is mandatory when we don't have an authorPerson -->
+                                    <representedOrganization>
+                                        <name>Dansk Center For Organdonation</name>
+                                    </representedOrganization>
+                                </assignedAuthor>
+                            </author>
+                        </observation>
+                    </entry>
+                    <!-- The citizen's Treatment Will Registration -->
+                    <entry typeCode="COMP">
+                        <!-- observation of citizen's Treatment Will Registration -->
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- Observation templateId for citizen's Treatment Will Registration -->
+                            <templateId root="1.2.208.184.16.1.10.20.1.29" extension="2019-08-14"/>
+                            <id extension="88423bf2-96c4-4df7-a36e-e55f7c02714b" root="1.2.208.184"/>
+                            <code code="TreatmentWillRegistration" codeSystem="1.2.208.184.100.1"
+                                codeSystemName="MedCom Message Codes"
+                                displayName="Registreret behandlingstestamente"/>
+                            <value xsi:type="II" root="1.2.208.176.1.9" extension="false"
+                                assigningAuthorityName="Sundhedsdatastyrelsen"/>
+                            <!-- Author of this information is a register at Sundhedsdatastyrelsen -->
+                            <author>
+                                <!-- This templateId is the used when the author of information is a register -->
+                                <templateId root="1.2.208.184.16.1.10.20.31" extension="2019-08-14"/>
+                                <!-- time is unknown -->
+                                <time nullFlavor="NI"/>
+                                <assignedAuthor>
+                                    <!-- id @root is set to 1.2.208.176.1.9 -->
+                                    <id root="1.2.208.176.1.9" extension="NI"
+                                        assigningAuthorityName="Sundhedsdatastyrelsen"/>
+                                    <!-- representedOrganization is mandatory when we don't have an authorPerson -->
+                                    <representedOrganization>
+                                        <name>Sundhedsdatastyrelsen</name>
+                                    </representedOrganization>
+                                </assignedAuthor>
+                            </author>
+                        </observation>
+                    </entry>
+                    <!-- The citizen's Living Will Registration -->
+                    <entry typeCode="COMP">
+                        <!-- observation of citizen's Living Will Registration -->
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- Observation templateId for citizen's Living Will Registration -->
+                            <templateId root="1.2.208.184.16.1.10.20.1.30" extension="2019-08-14"/>
+                            <id extension="7d2a50a0-dbf9-443c-8759-3574bed1dd1b" root="1.2.208.184"/>
+                            <code code="LivingWillRegistration" codeSystem="1.2.208.184.100.1"
+                                codeSystemName="MedCom Message Codes"
+                                displayName="Registreret livstestamente"/>
+                            <value xsi:type="II" root="1.2.208.176.1.8" extension="true"
+                                assigningAuthorityName="Sundhedsdatastyrelsen"/>
+                            <!-- Author of this information is register at Sundhedsdatastyrelsen -->
+                            <author>
+                                <!-- This templateId is the used when the author of information is a register -->
+                                <templateId root="1.2.208.184.16.1.10.20.31" extension="2019-08-14"/>
+                                <!-- time is unknown -->
+                                <time nullFlavor="NI"/>
+                                <assignedAuthor>
+                                    <!-- id @root is set to Sundhedsdatastyrelsen -->
+                                    <id root="1.2.208.176.1.8" extension="NI"
+                                        assigningAuthorityName="Sundhedsdatastyrelsen"/>
+                                    <!-- representedOrganization is mandatory when we don't have an authorPerson -->
+                                    <representedOrganization>
+                                        <name>Sundhedsdatastyrelsen</name>
+                                    </representedOrganization>
+                                </assignedAuthor>
+                            </author>
+                        </observation>
+                    </entry>
+                    <!-- The patient's spoken language, typed in -->
+                    <entry typeCode="COMP">
+                        <!-- observation of spoken language -->
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- observation templateId for spoken language, typed in -->
+                            <templateId root="1.2.208.184.16.1.10.20.1.20" extension="2019-08-14"/>
+                            <id extension="cacc53c5-2b59-4931-90a6-1bc612fc7674" root="1.2.208.184"/>
+                            <code code="LanguageTypedIn" codeSystem="1.2.208.184.100.1"
+                                codeSystemName="MedCom Message Codes"
+                                displayName="Talt sprog, indtastet"/>
+                            <!-- Value representing Spoken language -->
+                            <value xsi:type="CD" code="de" codeSystem="1.0.639.1"
+                                codeSystemName="ISO-639-1" displayName="Tysk"/>
+                            <author>
+                                <templateId root="1.2.208.184.16.1.10.20.30" extension="2019-08-14"/>
+                                <time value="20190808160310+0200"/>
+                                <assignedAuthor>
+                                    <id assigningAuthorityName="CPR" extension="2512484916"
+                                        root="1.2.208.176.1.2"/>
+                                    <assignedPerson>
+                                        <name>
+                                            <given>Bente</given>
+                                            <given>Kirkegård</given>
+                                            <family>Knudsen</family>
+                                        </name>
+                                    </assignedPerson>
+                                </assignedAuthor>
+                            </author>
+                        </observation>
+                    </entry>
+                    <!-- The patient's temporary addres, typed in -->
+                    <entry typeCode="COMP">
+                        <!-- observation of temporary address -->
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- Observation templateId for typed in temporary adress -->
+                            <templateId root="1.2.208.184.16.1.10.20.1.21" extension="2019-08-14"/>
+                            <id extension="fef7306c-26dc-471b-a451-d217fc6c515b" root="1.2.208.184"/>
+                            <code code="TempAddrTypedIn" codeSystem="1.2.208.184.100.1"
+                                codeSystemName="MedCom Message Codes"
+                                displayName="Midlertidig adresse, indtastet"/>
+                            <effectiveTime>
+                                <low value="20190101000000+0100"/>
+                                <high nullFlavor="NI"/>
+                            </effectiveTime>
+                            <value xsi:type="AD">
+                                <streetAddressLine>TemporarystreetAddressLineTypedIn</streetAddressLine>
+                                <streetAddressLine>TemporarystreetAddressLineTypedIn</streetAddressLine>
+                                <streetAddressLine>TemporarystreetAddressLineTypedIn</streetAddressLine>
+                                <streetAddressLine>TemporarystreetAddressLineTypedIn</streetAddressLine>
+                                <postalCode>TemporarypostalCodeTypedIn</postalCode>
+                                <city>TemporarycityTypedIn</city>
+                                <country>TemporarycountryTypedIn</country>
+                            </value>
+                            <author>
+                                <templateId root="1.2.208.184.16.1.10.20.30" extension="2019-08-14"/>
+                                <time value="20190808160210+0200"/>
+                                <assignedAuthor>
+                                    <id assigningAuthorityName="CPR" extension="2512484916"
+                                        root="1.2.208.176.1.2"/>
+                                    <assignedPerson>
+                                        <name>
+                                            <given>Bente</given>
+                                            <given>Kirkegård</given>
+                                            <family>Knudsen</family>
+                                        </name>
+                                    </assignedPerson>
+                                </assignedAuthor>
+                            </author>
+                        </observation>
+                    </entry>
+                    <!-- The patient's dentist: Typed in -->
+                    <entry typeCode="COMP">
+                        <!-- observation of Dentist information -->
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- Observation templateId for typed in dentist -->
+                            <templateId root="1.2.208.184.16.1.10.20.1.22" extension="2019-08-14"/>
+                            <id extension="8f1d5b96-b16e-405d-a840-4e5bc87690ae" root="1.2.208.184"/>
+                            <code code="DentistTypedIn" codeSystem="1.2.208.184.100.1"
+                                codeSystemName="MedCom Message Codes"
+                                displayName="Tandlæge indtastet"/>
+                            <value xsi:type="II" extension="654321" root="1.2.208.176.1.4"
+                                assigningAuthorityName="Yderregisteret"/>
+                            <value xsi:type="EN">
+                                <prefix>Tandlæge</prefix>
+                                <given>Jette</given>
+                                <family>Testesen</family>
+                            </value>
+                            <value xsi:type="AD">
+                                <streetAddressLine>DentiststreetAddressLineTypedIn</streetAddressLine>
+                                <streetAddressLine>DentiststreetAddressLineTypedIn</streetAddressLine>
+                                <streetAddressLine>DentiststreetAddressLineTypedIn</streetAddressLine>
+                                <streetAddressLine>DentiststreetAddressLineTypedIn</streetAddressLine>
+                                <postalCode>DentistpostalCodeTypedIn</postalCode>
+                                <city>DentistcityTypedIn</city>
+                                <country>DentistcountryTypedIn</country>
+                            </value>
+                            <author>
+                                <templateId root="1.2.208.184.16.1.10.20.30" extension="2019-08-14"/>
+                                <time value="20190808160110+0200"/>
+                                <assignedAuthor>
+                                    <id assigningAuthorityName="CPR" extension="2512484916"
+                                        root="1.2.208.176.1.2"/>
+                                    <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+                                        <name>
+                                            <given>Bente</given>
+                                            <given>Kirkegård</given>
+                                            <family>Knudsen</family>
+                                        </name>
+                                    </assignedPerson>
+                                </assignedAuthor>
+                            </author>
+                        </observation>
+                    </entry>
+                    <!-- The patient's contact information, typed in-->
+                    <entry typeCode="COMP">
+                        <!-- observation of contact information -->
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- Observation templateId for patient contactinformation, typed in -->
+                            <templateId root="1.2.208.184.16.1.10.20.1.24" extension="2019-08-14"/>
+                            <id extension="95055cc4-39cc-4f77-99ae-300731c4522a" root="1.2.208.184"/>
+                            <code code="PatientContactTypedIn" codeSystem="1.2.208.184.100.1"
+                                codeSystemName="MedCom Message Codes"
+                                displayName="Kontaktoplysninger, indtastet"/>
+                            <value xsi:type="TEL" use="H" value="tel:+4511223344"/>
+                            <value xsi:type="TEL" use="WP" value="tel:(0045)33112244-33112255-3010"/>
+                            <value xsi:type="TEL" use="MC" value="tel:+4566774433"/>
+                            <value xsi:type="TEL" use="WP" value="mailto:bkh@unknownmail.dk"/>
+                            <!-- Typed in by: -->
+                            <author>
+                                <templateId root="1.2.208.184.16.1.10.20.30" extension="2019-08-14"/>
+                                <time value="20190808155910+0200"/>
+                                <assignedAuthor>
+                                    <id assigningAuthorityName="CPR" extension="2512484916"
+                                        root="1.2.208.176.1.2"/>
+                                    <assignedPerson>
+                                        <name>
+                                            <given>Nancy</given>
+                                            <family>Berggren</family>
+                                        </name>
+                                    </assignedPerson>
+                                </assignedAuthor>
+                            </author>
+                        </observation>
+                    </entry>
+                    <!-- The patient's Relative's: Typed in -->
+                    <entry typeCode="COMP">
+                        <!-- Observation of Relative's name, phone numbers, Relation and note -->
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- Observation templateId identifying a typed in relative -->
+                            <templateId root="1.2.208.184.16.1.10.20.1.25" extension="2019-08-14"/>
+                            <id extension="839697de-9660-4575-a3ac-61def6fb3474" root="1.2.208.184"/>
+                            <code code="RelativeTypedIn" codeSystem="1.2.208.184.100.1"
+                                codeSystemName="MedCom Message Codes"
+                                displayName="Pårørende, indtastet"/>
+                            <!-- The patient's Relative's name and phone numbers -->
+                            <value xsi:type="PN">
+                                <given>RelativeGivenNameTypedIn</given>
+                                <family>RelaiveFammilyNameTypedIn</family>
+                            </value>
+                            <value xsi:type="TEL" use="H" value="tel:11223344"/>
+                            <value xsi:type="TEL" use="WP" value="tel:(46)-55667788-1234"/>
+                            <value xsi:type="TEL" use="MC" value="tel:99001122"/>
+                            <!-- The Relative's relation to the patient -->
+                            <value xsi:type="CD" code="nabo" codeSystem="1.2.208.184.100.2"
+                                codeSystemName="MedCom Relation Codes" displayName="Nabo"/>
+                            <!-- A note about the Relative -->
+                            <value xsi:type="ST">Naboen arbejder hos TDC i Sverige og kan træffes på
+                                arbejdstelefon i dagtimerne ml. 8 og 16.</value>
+                            <!-- Typed in by: -->
+                            <author>
+                                <templateId root="1.2.208.184.16.1.10.20.30" extension="2019-08-14"/>
+                                <time value="20190808155810+0200"/>
+                                <assignedAuthor>
+                                    <id assigningAuthorityName="CPR" extension="2512484916"
+                                        root="1.2.208.176.1.2"/>
+                                    <assignedPerson>
+                                        <name>
+                                            <given>Bente</given>
+                                            <given>Kirkegård</given>
+                                            <family>Knudsen</family>
+                                        </name>
+                                    </assignedPerson>
+                                </assignedAuthor>
+                            </author>
+                        </observation>
+                    </entry>
+                </section>
+            </component>
+        </structuredBody>
+    </component>
+</ClinicalDocument>
