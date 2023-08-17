@@ -22,7 +22,7 @@
 		<repository>
 			<id>irisa-sumo</id>
 			<name>Sumo Irisa Public Maven Repository Group</name>
-			<url>http://gazelle.ihe.net/nexus/content/groups/public/</url>
+			<url>https://gazelle.ihe.net/nexus/content/groups/public/</url>
 			<layout>default</layout>
 			<releases>
 				<enabled>true</enabled>
@@ -37,7 +37,7 @@
 			<snapshots />
 			<id>snapshots</id>
 			<name>libs-snapshot</name>
-			<url>http://cdatools.com:8081/artifactory/libs-snapshot</url>
+			<url>https://cdatools.com:8081/artifactory/libs-snapshot</url>
 		</repository>
 	</repositories>
 
